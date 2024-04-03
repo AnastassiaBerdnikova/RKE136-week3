@@ -11,6 +11,7 @@ html {
     color: #151515;
 }
 
+
 .modal {
     display: none;
     position: fixed;
@@ -53,7 +54,7 @@ html {
 
 .movie-card {
     margin-top: 10px;
-    height: 700px;
+    height: 1100px;
     text-align: center;
 }
 
@@ -114,6 +115,54 @@ html {
     letter-spacing: 0.1rem;
 }
 
+.carousel {
+    max-width: 500px;
+    margin: 3rem auto;
+    position: relative;
+
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hiden {
+    display: none;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button{
+    border-radius: 50px;
+    cursor:pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(128, 128, 128, 0.897);
+    font-size: 2rem;
+    color: white;
+    margin: 0.5rem;
+}
+
 .movie-info-actions {
     font-size:1.1rem;
     
@@ -128,8 +177,8 @@ html {
 .movie-info-actions ul li {
     display: inline-block;
     margin-right: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
     height: 50px;
     width: 50px;
     border-radius: 50%;
